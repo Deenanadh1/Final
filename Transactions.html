@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      *{
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+  font-family: Open sans;
+  width: 100%;
+  /* background-color: rgb(36, 32, 32); */
+  /* color: white; */
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: rgb(246, 249, 252);
+}
+
+.title {
+  margin-bottom: 20px;
+  width: 100%;
+  height: 40px;
+  background-color: #25d366;
+  opacity: 0.8;
+  text-align: center;
+  border-radius: 1rem;
+  color: azure;
+}
+
+.topnav {
+  margin-bottom: 50px;
+            overflow: hidden;
+            background-color: rgb(133, 128, 128);
+        }
+
+        .topnav a {
+            float: left;
+            color: #f2f2f2;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+            width: 25%;
+        }
+
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .topnav a.active {
+            background-color: #25D366;
+            color: white;
+        }
+
+/*.container {
+  padding: 30px 40px;
+  border-radius: 1rem;
+  border: 3px solid #25d366;
+  margin: 25px;
+  /* width: 350px; 
+  background-color: rgba(242, 247, 250, 0.685);
+}*/
+
+h1 {
+  letter-spacing: 2px;
+  margin: 0;
+  margin: 10px 0 10px;
+  text-transform: uppercase;
+}
+
+h3 {
+  border-bottom: 1px solid #bbb;
+  padding-bottom: 5px;
+  margin-bottom: 12px;
+  text-align: center;
+  color: rgb(12, 12, 12);
+  font-size: 20px;
+}
+
+h4 {
+  margin: 0;
+  text-transform: uppercase;
+  color: azure;
+}
+#balance {
+  color: azure;
+}
+
+.income-expense {
+  background-color: #25d366;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 1rem;
+  box-shadow: 0 5px 6px rgba(58, 73, 80, 0.685),
+    0 5px 6px rgba(58, 73, 80, 0.685);
+}
+
+.income-expense > div {
+  flex: 1;
+  text-align: center;
+}
+
+/* .income-expense > div:first-of-type {
+  border-right: 0.5px solid rgb(0, 0, 0);
+} */
+
+.income,
+.expense,
+#balance {
+  font-size: 20px;
+  letter-spacing: 2px;
+  margin: 5px 0;
+  font-weight: bolder;
+}
+
+.income {
+  color: green;
+}
+.expense {
+  color: #c34234d3;
+}
+#balance {
+  color: rgb(72, 90, 255);
+}
+.bg-dark {
+  
+  margin: 0 2px;
+
+  border-radius: 3px;
+}
+
+input[type="text"],
+input[type="number"] {
+  border: 1px solid silver;
+  border-radius: 1rem;
+  /* display: block; */
+  padding: 5px;
+  width: 100%;
+  font-size: 16px;
+  outline: none;
+  box-shadow: 1px 2px 1px #000000;
+}
+label {
+  display: inline-block;
+  margin: 10px 0;
+  font-weight: bolder;
+}
+
+.btn {
+ 
+  margin-top: 30px;
+  padding: 8px 0;
+  border-radius: 1rem;
+  outline: none;
+  background-color: #25d366;
+  color: whitesmoke;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+.btn:hover {
+  color: steelblue;
+  background-color: whitesmoke;
+}
+
+.delete-btn {
+  background-color: rgb(139, 192, 235);
+  border-radius: 1rem;
+  outline: none;
+  float: right;
+  margin-right: 5px;
+  width: 25px;
+  height: 25px;
+}
+
+#text:focus,
+#amount:focus {
+  width: 10%;
+  transition: 0.5s;
+  border-bottom: 2px solid steelblue;
+  border-right: 2px solid steelblue;
+}
+
+ul {
+  list-style: none;
+  display: inline;
+}
+ul li {
+  font-weight: bolder;
+  font-size: 21px;
+}
+
+.fa {
+  color: azure;
+}
+.fa:hover {
+  color: steelblue;
+  background-color: whitesmoke;
+  transform: rotate(20deg);
+}
+
+#error_msg {
+  color: red;
+  background-color: rgb(224, 189, 183);
+  font-weight: bolder;
+  padding: 0 10px;
+  border-radius: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+.list {
+  color: rgb(10, 10, 10);
+}
+
+.width{
+  width: 100%;
+  justify-content: center;
+}
+
+.minus,
+.plus {
+  margin-bottom: 8px;
+  border-bottom: 1px solid rgb(177, 177, 177);
+}
+.minus:hover,
+.plus:hover {
+  background-color: rgb(243, 102, 102);
+  cursor: pointer;
+}
+footer {
+  text-align: center;
+  font-weight: bolder;
+  color: white;
+}
+footer a {
+  color: rgb(86, 184, 197);
+}
+
+.hover:hover{
+
+}
+
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>My Budget App</title>
+  </head>
+  <body>
+    <div class="row">
+      <div  class="topnav column">
+        <a href="Dashboard.html">Dashboard</a>
+        <a class="active" href="Transactions.html">Transactions</a>
+        <a href="help.html">Help</a>
+        <a href="index.html">logout</a>
+    </div>
+   
+    <div class=" width column">
+      <p id="error_msg"></p>
+      <div class="title">
+        <h1 class="title">
+          My Budget <a href="#"><i class="fa fa-money"></i></a>
+        </h1>
+      </div>
+
+      <h1 style="font-size: 25px;">Enter Transactions</h1>
+      <form id="form">
+        <div class="form-control" style="height: 20%; margin: 15px; font-size: 25px;font-family: Open Sans;">
+          <label for="text">Transaction name</label>
+          <input
+          style="height:50px;"
+            type="text"
+            id="text"
+            onfocus="this.value=''"
+            placeholder="Enter Transaction name"
+          />
+        </div>
+        <div class="form-control" style="height:20%; margin: 15px; font-size: 25px;font-family: Open Sans;">
+          <label for="amount">Amount (-) for expense and (+) for income <br /> </label>
+          <input
+          style="height:50px;"
+            type="number"
+            id="amount"
+            onfocus="this.value=''"
+            placeholder="Enter Amount with sign"
+          />
+        </div>
+        <button  class="btn" style="overflow: hidden;width: 30%;height: 50%;font-family: Open Sans;font-size: 25px;">
+            <i class="fa fa-plus-square">
+            </i>
+          Add transaction
+        </button>
+      </form>
+      <br />
+      <div class="income-expense">
+        <div class="bg-dark">
+          <h4>Income</h4>
+          <p class="income" id="income">$0.00</p>
+        </div>
+        <div class="bg-dark">
+          <h4>Expenses</h4>
+          <p class="expense" id="expense">$0.00</p>
+        </div>
+        <div class="bg-dark">
+          <h4>Total</h4>
+          <p id="balance">$0.00</p>
+        </div>
+      </div>
+      <h3>Recent Transactions</h3>
+      <!-- Dynamic unordered list to display the various transactions -->
+      <ul id="list" class="list"></ul>
+      </div>
+    <div  class="column width alignment" >
+      <button  onclick="location.href='Dashboard.Html'" class="btn " style="overflow:hidden;height: 50%; width:25%;font-size: 25px; font-family: Open Sans;">
+        Dashboard
+        <i class="fa fa-desktop">
+        </i>
+      </button>
+    </div>
+    </div>
+    </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
